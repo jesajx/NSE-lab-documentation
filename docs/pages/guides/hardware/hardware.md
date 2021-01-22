@@ -51,8 +51,8 @@ nav_order: 1
       voltage will switch sign (plus to minus and vice versa).
 * If your device has a high voltage part or AC:
     * Be very, very careful.
-    * Have a easy way to unplug the device (like a switch, but don't rely too
-      much on it).
+    * Prepare an easy way to unplug the device (like a switch, but don't rely on it too
+      much).
     * Consider if you can detach the DC-part of the board and analyze only
       that. You may need a (DC) powersupply to power it and for that you need
       to identify how the circuit receives power.
@@ -67,3 +67,10 @@ nav_order: 1
 
 ## Arduino, raspberrypi, etc. tips and tricks
 * TODO put this on another page?
+
+## chipoff
+* TODO if it is not your device, then ask first
+* TODO methods, equipment
+
+## Common label, symbols and markings
+* TODO something like [this](https://electronics.stackexchange.com/a/25310)
