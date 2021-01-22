@@ -71,6 +71,9 @@ nav_order: 5
   Ground  (GND) | Ground
   Voltage (Vcc) | Usually either 3.3V or 5V
 
+* TX and RX are usually adjacent, but sometimes GND and VCC is located elsewhere.
+* If you do not have to provide power, then VCC-pin is usually not necessary.
+
 * Chipset will have instructions on the connectors, otherwise use a
 * Multimeter
   * continuity test (for GND)
@@ -137,10 +140,16 @@ nav_order: 5
     * after detecting correct baud rate press Ctrl + C
 
 * **Interacting with console**
-  * screen < mount point > < baud rate >
+  * `screen ${mount_point} ${baud_rate}`
+  * for example:
   
-  `screen /dev/ttyUSB0 38400`
+    `screen /dev/ttyUSB0 38400`
+
+  * `screen` also supports logging (see `man screen`), which can be useful:
+
+    `screen -L -Logfile mylog.log /dev/ttyUSB0 38400`
   
+  * On windows you can use PuTTY in a similar way to connect to COM-ports.
   * reboot the device
   * access debug logs of the device booting up process
   * right after booting, "busybox" is up
