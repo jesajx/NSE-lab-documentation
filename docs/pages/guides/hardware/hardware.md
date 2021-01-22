@@ -33,6 +33,7 @@ nav_order: 1
 
 
 ## Voltmeter tests on powered device.
+* TODO put this on another page?
 * TODO about what to do with circuits where there is a mixed DC and AC.
     * TODO for example only power DC-part using power supply.
     * TODO or just be very, very careful.
@@ -63,3 +64,6 @@ nav_order: 1
 
 * TODO link to videos (embed videos here?)
 * TODO link to resources
+
+## Arduino, raspberrypi, etc. tips and tricks
+* TODO put this on another page?
