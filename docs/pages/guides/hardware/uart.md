@@ -71,7 +71,7 @@ nav_order: 5
   Ground  (GND) | Ground
   Voltage (Vcc) | Usually either 3.3V or 5V
 
-* TX and RX are usually adjacent, but sometimes GND and VCC is located elsewhere.
+* TX and RX are usually adjacent, but sometimes GND and VCC are located elsewhere.
 * If you do not have to provide power, then VCC-pin is usually not necessary.
 
 * Chipset will have instructions on the connectors, otherwise use a
