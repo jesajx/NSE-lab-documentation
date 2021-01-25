@@ -74,3 +74,5 @@ nav_order: 1
 
 ## Common label, symbols and markings
 * TODO something like [this](https://electronics.stackexchange.com/a/25310)
+
+## Emulation of various architectures
