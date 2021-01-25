@@ -16,12 +16,15 @@ Usually UART takes one byte at a time and emits the bits in
 but there are other variations.
 
 
+Examples:
+* <https://en.wikipedia.org/wiki/8250_UART>
+
 ## Serial
 [Serial communication](https://en.wikipedia.org/wiki/Serial_communication) is the idea of sending one bit at a time over a interface.
 This is usually done over a single wire but there are more complex ways (e.g. USB where there are is a "twisted pair" of wires).
 This is a opposed to [parallel communication](https://en.wikipedia.org/wiki/Parallel_communication) where multiple bits are sent at once (which requires multiple wires).
 
-UART is asynchronous in the sense that the device on the sending end and the device on the receiving end are not synchronized using for example a clock (like TCK in JTAG) or flow control (like RTS and CTS in RS-232).
+UART is asynchronous in the sense that the device on the sending end and the device on the receiving end are not synchronized using for example a shared clock.
 
 Often the term "UART" and "serial" will be used interchangably to refer to the full setup (hardware, cable, protocol, communication, etc.).
 
@@ -42,7 +45,7 @@ In a sense all digital communication protocols are "TTL" on some level.
 
 
 ### RS-232
-[RS-232](https://en.wikipedia.org/wiki/RS-232) is an old TTL-style serial communication
+[RS-232](https://en.wikipedia.org/wiki/RS-232) (a.k.a. EIA/TIA-232) is an old TTL-style serial communication
 standard that has since been readapted for various purposes.
 
 RS-232 is typically associated with the [DB-25](https://en.wikipedia.org/wiki/DB-25) connector.
@@ -90,6 +93,7 @@ See also:
 * <https://en.wikipedia.org/wiki/Serial_port>
 * <https://www.sparkfun.com/tutorials/215>
 * <https://support.honeywellaidc.com/s/article/What-are-the-differences-between-TTL-and-a-True-RS232-serial-interface>
+* <https://en.wikibooks.org/wiki/Serial_Programming/RS-232_Connections>
 
 ### USB
 [USB](https://en.wikipedia.org/wiki/USB) is perhaps a serial communication you are more familiar with.
@@ -126,14 +130,39 @@ See also:
 * <https://en.wikipedia.org/wiki/USB_(Communications)>
 * <https://en.wikipedia.org/wiki/USB_3.0#PINOUTS>
 
-<!--
+### RS-422
+[RS-422](https://en.wikipedia.org/wiki/RS-422) (a.k.a. EIA/TIA-422) is like RS-232, but uses
+one or two twisted pairs (simiarly to USB).
+
 ### RS-485
-[RS-485](https://en.wikipedia.org/wiki/RS-485) is like RS-232, but uses
-twisted pairs like USB.
+[RS-485](https://en.wikipedia.org/wiki/RS-485) (a.k.a. EIA/TIA-485) is like
+RS-422, but uses three voltage levels instead of two. This is used to connect
+multiple devices on the same wire --  a "bus network". RS-485 is often used to
+implement Modbus.
 
 
 ### Modbus
-TODO [Modbus](https://en.wikipedia.org/wiki/Modbus) is a protocol and can be
-used with many different cables and hardwares.
+[Modbus](https://en.wikipedia.org/wiki/Modbus) is a protocol (rather than a
+hardware interface) and can be used with many different cables and hardwares.
+Modbus can for example use RS-232, RS-485 or IP to communicate.
 
--->
+Modbus is a master-slave style of protocol. There is a single "master" device
+and one or more "slave" devices. The protocol works by the master sending
+commands to the slaves and the slaves respond.
+
+The [Modbus message format](https://en.wikipedia.org/wiki/Modbus#Frame_formats)
+varies depending on the underlying technology (RS-232, IP and so on), but
+typically contains an address (for the slave), a function code, arguments (for
+the function) and a error-detection code.
+
+Modbus is common in industrial systems where a Remote Terminal Interface (RTU)
+acts as the master and manages Programmable Logic Controllers (PLCs) and other
+industrial appliances. The RTU is "remote" in the sense that it acts lika a
+"local server" that in turns answers to a centralized system. The centralized
+system is usually a Supervisory Control and Data Acquisition (SCADA) system.
+Imagine for example that there are multiple factories and there is a RTU in
+each factory that can then be controlled remotely from the headquarters.
+
+
+See also:
+* <https://www.modbus.org/specs.php>
