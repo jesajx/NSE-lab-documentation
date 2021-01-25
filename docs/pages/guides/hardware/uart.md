@@ -9,14 +9,7 @@ nav_order: 1
 # Analyzing UART
 
 ## What is UART?
-
-[UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) is a hardware component used to implement [serial communication](https://en.wikipedia.org/wiki/Serial_communication).
-Often the term "UART" and "serial" will be used interchangably to refer to the full setup (hardware, cable, protocol, communication, etc.).
-
-Serial communication is the idea of sending one bit at a time over a interface. This is usually done over a single wire but there are more complex ways (e.g. USB where there are is a "twisted pair" of wires).
-This is a opposed to parallel communication where multiple bits are sent at once (which requires multiple wires).
-
-
+See [background](./uart_background.html).
 
 ## 1. UART internals
 
@@ -27,8 +20,6 @@ This is a opposed to parallel communication where multiple bits are sent at once
   * TTL interface has 3-5 pins
   * RS-232 interface has a 9-pin connector, etc.
 * These interfaces are also used for debugging (testing connections) the device
-
-<!-- TODO maybe add some pictures -->
 
 * UART Data packet
   * starting bit (usually 0)
@@ -86,8 +77,6 @@ This is a opposed to parallel communication where multiple bits are sent at once
 
 * TX and RX are usually adjacent, but sometimes GND and VCC are located elsewhere.
 * If you do not have to provide power through VCC, then the VCC-pin is usually not necessary. You still need ground, though.
-
-<!-- TODO list all possible pinouts? e.g. differentiate RS-232, RS-485, USB, etc. ? -->
 
 * Chipset will have instructions on the connectors, otherwise use a
 * Multimeter
