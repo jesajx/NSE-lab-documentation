@@ -1,8 +1,9 @@
 ---
 title: 0x01 - Analyzing UART
-parent: Hacking Guides
+parent: Hardware Hacking
+grand_parent: Hacking Guides
 has_children: false
-nav_order: 5
+nav_order: 1
 ---
 
 # Analyzing UART
