@@ -116,11 +116,14 @@ The differential signalling helps reduce noise from electromagnetic interference
 
 The USB protocol differentiates between the "host" (for example a PC) and the
 device (for example a mouse or smartphone) and works like a master-slave style
-protocol. The host and device take turns to transmit using D+ and D- and this
-is determined by the control flow in the USB protocol (in a sort of
-client-server or master-servant way).
+protocol.
 
-Newer versions of USB add additional twisted pairs for speed.
+The USB protocol is half-duplex. The host and device take turns to transmit
+using D+ and D- and this is determined by the control flow in the USB protocol
+(in a sort of client-server or master-servant way).
+
+Newer versions of USB add additional twisted pairs to achieve full-duplex for
+increased speed.
 
 <!-- TODO photo of USB type A showing the 4 pins -->
 <!-- TODO image of twisted pair -->
@@ -132,7 +135,7 @@ See also:
 
 ### RS-422
 [RS-422](https://en.wikipedia.org/wiki/RS-422) (a.k.a. EIA/TIA-422) is like RS-232, but uses
-one or two twisted pairs (simiarly to USB).
+one or two twisted pairs (similarly to USB).
 
 ### RS-485
 [RS-485](https://en.wikipedia.org/wiki/RS-485) (a.k.a. EIA/TIA-485) is like
