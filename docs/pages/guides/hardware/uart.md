@@ -13,7 +13,7 @@ nav_order: 1
 * Designed for two different components on a device to talk to each other 
 * Microcontroller chip in devices typically have UART pins
 * UART is a way of serial communication 
-* Common serial channels (TTL, RS232, USB, PCI, HDMI, SPI, I2C, CAN)
+* Common serial channels (TTL, RS232, USB, PCI, HDMI, SPI, I2C, CAN, RS485)
   * TTL interface has 3-5 pins
   * RS-232 interface has a 9-pin connector, etc.
 * These interfaces are also used for debugging (testing connections) the device
@@ -158,4 +158,3 @@ nav_order: 1
   * access debug logs of the device booting up process
   * right after booting, "busybox" is up
   * unauthenticated root shell on the device
-
