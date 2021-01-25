@@ -73,7 +73,7 @@ nav_order: 1
   Voltage (Vcc) | Usually either 3.3V or 5V
 
 * TX and RX are usually adjacent, but sometimes GND and VCC are located elsewhere.
-* If you do not have to provide power, then VCC-pin is usually not necessary.
+* If you do not have to provide power through VCC, then the VCC-pin is usually not necessary. You still need ground, though.
 
 * Chipset will have instructions on the connectors, otherwise use a
 * Multimeter
@@ -146,9 +146,12 @@ nav_order: 1
   
     `screen /dev/ttyUSB0 38400`
 
-  * `screen` also supports logging (see `man screen`), which can be useful:
+  * `screen` also supports logging in both directions (see `man screen`), which can be useful:
 
     `screen -L -Logfile mylog.log /dev/ttyUSB0 38400`
+
+  * In some cases it is possible to set the baudrate using `stty`and then reading and
+    writing to `/dev/ttyUSB0` directly.
   
   * On windows you can use PuTTY in a similar way to connect to COM-ports.
   * reboot the device

@@ -7,29 +7,37 @@ nav_order: 1
 
 # Hardware Hacking
 
+<!--
+## Initial unpowered multimeter tests using the continuity setting
+TODO remove? already mentioned on uart-page.
 
-## Initial unpowered voltmeter tests.
-* TODO put this on another page?
-* If the circuit board you are analyzing lacks useful labels you may need to
-  use a voltmeter (and possibly a logic analyzer or ocilloscope) to identify pins.
-* Start with the target device unpowered.
-* Use the coninuity setting on the multimeter/voltmeter. The continuity
-  setting usually looks like the WiFi symbol.
-* The black cable should go to "COM" (usually black) on the multimeter and the red cable to
-  the ohm/V port. There are usually two red jacks where one is for measuring e.g. voltage and the other for current. For continuity use the one for voltage.
-* If you touch the two probes together, the voltmeter should audibly beep.
-* I you touch the probes to each end of a wire, the voltmeter should beep.
-* If you pinch one probe in each hand, the voltmeter should NOT beep.
-* I you touch the probes to two unconnected wires, the voltmeter should NOT beep.
-* I you touch the probes to two ends of a components (like a resistor), the voltmeter should NOT beep.
-* Intuitively, the continuity checks if there is resistance between the two probes. If the voltmeter beeps the wires are "the same".
-* TODO include photo of multimeter.
-* The continuity setting is useful for:
-    * tracing e.g. ground and VCC across a different parts of the board. If there are two ground pins, the voltmeter should beep if you prod each end.
-    * identifying wires at both ends of a cable (a cable is a bundle of wires).
-    * check for mistakes in soldering.
-    * identifying where the wire to your headset is broken.
-* If you have trouble finding ground, look for antenna jacks and chassis.
+If the circuit board you are analyzing lacks useful labels you may need to use a multimeter (and possibly a logic analyzer or ocilloscope) to identify pins.
+
+The continuity setting does not require the target device to have power, so with the device unpowered.
+The continuity setting on the multimeter usually looks like the WiFi symbol.
+
+The black cable should go to "COM" (usually black) on the multimeter and the red cable to the ohm/V port.
+There are usually two red jacks where one is for measuring voltage (and resistance, etc.) and the other for current.
+For continuity use the one for voltage.
+Intuitively, the continuity check will beep if the two probes are "connected with little resistance".
+
+The multimeter will beep:
+* if you touch the two probes together.
+* if you touch the probes to each end of a wire.
+
+The multimeter will not beep:
+* if you pinch one probe in each hand
+* if you touch the probes to two unconnected wires
+* if you touch the probes to two ends of a components (like a resistor)
+
+TODO include photo of multimeter.
+
+The continuity setting is useful for:
+* Tracing ground and VCC across a different parts of the board. If there are two ground pins, the voltmeter should beep if you prod each end.
+* Telling apart wires at both ends of a cable (a cable is a bundle of wires).
+* Check for mistakes in soldering.
+
+If you have trouble finding ground, look for antenna jacks and chassis.
 
 
 ## Voltmeter tests on powered device.
@@ -76,3 +84,4 @@ nav_order: 1
 * TODO something like [this](https://electronics.stackexchange.com/a/25310)
 
 ## Emulation of various architectures
+-->
