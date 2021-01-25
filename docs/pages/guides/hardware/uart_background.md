@@ -105,7 +105,7 @@ The pins of USB Type-A and Type-B look like this:
 
   Pin   | Function
   ------|--------
-  V BUS | power from A to B
+  V<sub>BUS</sub> | power from A to B
   D-    | Transmits data
   D+    | Transmits data
   GND   | Ground
