@@ -13,20 +13,19 @@ nav_order: 1
 Essentially it takes "data" and emits digital pulses (a.k.a. [line code](https://en.wikipedia.org/wiki/Line_code)).
 Usually UART takes one byte at a time and emits the bits in
 [NZR](https://en.wikipedia.org/wiki/Non-return-to-zero) format,
-but there are other variations.
-
+but there are other formats.
 
 Examples:
 * <https://en.wikipedia.org/wiki/8250_UART>
 
 ## Serial
-[Serial communication](https://en.wikipedia.org/wiki/Serial_communication) is the idea of sending one bit at a time over a interface.
+[Serial communication](https://en.wikipedia.org/wiki/Serial_communication) is the idea of sending one bit at a time over an interface.
 This is usually done over a single wire but there are more complex ways (e.g. USB where there are is a "twisted pair" of wires).
 This is a opposed to [parallel communication](https://en.wikipedia.org/wiki/Parallel_communication) where multiple bits are sent at once (which requires multiple wires).
 
 UART is asynchronous in the sense that the device on the sending end and the device on the receiving end are not synchronized using for example a shared clock.
 
-Often the term "UART" and "serial" will be used interchangably to refer to the full setup (hardware, cable, protocol, communication, etc.).
+Often the term "UART" and "serial" will be used interchangeably to refer to the full setup (hardware, cable, protocol, communication, etc.).
 
 There are multiple protocols that fall in the category of serial communication and many are typically implemented some form of UART-component.
 See for example [here](https://en.wikipedia.org/wiki/Serial_port).
@@ -62,7 +61,7 @@ confusing ("serial", "TTL", "RS-232", "UART" and various other names are used).
 There might be UART-components used in the circuit that implements RS-232, but
 additional components and wiring are typically needed to convert the voltage to/from a UART-component.
 
-RS-232 specifies a lot of pins, but most of them are optional. A minimial set of
+RS-232 specifies a lot of pins, but most of them are optional. A minimal set of
 pins (for communication between devices "A" and "B") is:
 
   Pin | Function
@@ -115,12 +114,13 @@ The difference between the voltages of D+ and D- is used to calculate the
 actual data sent. Think of it as D+ and D- together form "TxD".
 The differential signalling helps reduce noise from electromagnetic interference.
 
-The USB protocol differentiates between the "host" (for example a PC) and the device
-(for example a mouse or smartphone).
-D+ and D- will be used to send data either way as determined by the control
-flow in the USB protocol (in a sort of client-server or master-servant way).
+The USB protocol differentiates between the "host" (for example a PC) and the
+device (for example a mouse or smartphone) and works like a master-slave style
+protocol. The host and device take turns to transmit using D+ and D- and this
+is determined by the control flow in the USB protocol (in a sort of
+client-server or master-servant way).
 
-Newer versions of USB add additional twiskkkkkkkkkkkkkk
+Newer versions of USB add additional twisted pairs for speed.
 
 <!-- TODO photo of USB type A showing the 4 pins -->
 <!-- TODO image of twisted pair -->
@@ -143,7 +143,7 @@ implement Modbus.
 
 ### Modbus
 [Modbus](https://en.wikipedia.org/wiki/Modbus) is a protocol (rather than a
-hardware interface) and can be used with many different cables and hardwares.
+hardware interface) and can be used with many different cables and hardware.
 Modbus can for example use RS-232, RS-485 or IP to communicate.
 
 Modbus is a master-slave style of protocol. There is a single "master" device
@@ -153,15 +153,15 @@ commands to the slaves and the slaves respond.
 The [Modbus message format](https://en.wikipedia.org/wiki/Modbus#Frame_formats)
 varies depending on the underlying technology (RS-232, IP and so on), but
 typically contains an address (for the slave), a function code, arguments (for
-the function) and a error-detection code.
+the function) and an error-detection code.
 
 Modbus is common in industrial systems where a Remote Terminal Interface (RTU)
 acts as the master and manages Programmable Logic Controllers (PLCs) and other
-industrial appliances. The RTU is "remote" in the sense that it acts lika a
-"local server" that in turns answers to a centralized system. The centralized
-system is usually a Supervisory Control and Data Acquisition (SCADA) system.
-Imagine for example that there are multiple factories and there is a RTU in
-each factory that can then be controlled remotely from the headquarters.
+industrial appliances. The RTU is "remote" in the sense that it acts like a
+"local server" that in turns answers to a centralized Supervisory Control and
+Data Acquisition (SCADA) system. Imagine for example that there are multiple
+factories and there is a RTU in each factory that can then be controlled
+remotely from the headquarters.
 
 
 See also:
