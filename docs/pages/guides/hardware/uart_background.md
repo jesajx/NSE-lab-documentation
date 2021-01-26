@@ -42,6 +42,10 @@ In the same way information can also be sent one bit at a time across a wire bet
 long as both ends agree on the timing and interpretation of the signal.
 In a sense all digital communication protocols are "TTL" on some level.
 
+A "pullup-resistor" or "pulldown-resistor" is used to set the default voltage
+level (the voltage when nothing is being sent). If the default is not set then
+the voltage level can "float" between the levels due to electromagnetic
+interference.
 
 ### RS-232
 [RS-232](https://en.wikipedia.org/wiki/RS-232) (a.k.a. EIA/TIA-232) is an old TTL-style serial communication
@@ -49,8 +53,6 @@ standard that has since been readapted for various purposes.
 
 RS-232 is typically associated with the [DB-25](https://en.wikipedia.org/wiki/DB-25) connector.
 This connector is common on older PCs, but have mostly been replaced by USB on modern PCs.
-
-<!-- TODO photo of D-25 -->
 
 The actual standard uses + x V for logic low and -x V for logic high, such that: 3 <= x <= 13.
 Many modern IoT devices found "in the wild" will however communicate in ways that do not fully comply with the RS-232 standard.
@@ -124,9 +126,6 @@ using D+ and D- and this is determined by the control flow in the USB protocol
 
 Newer versions of USB add additional twisted pairs to achieve full-duplex for
 increased speed.
-
-<!-- TODO photo of USB type A showing the 4 pins -->
-<!-- TODO image of twisted pair -->
 
 See also:
 * <https://en.wikipedia.org/wiki/USB_hardware>
