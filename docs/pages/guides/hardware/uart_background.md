@@ -107,8 +107,8 @@ In some cases there may also be a "VCC" (or "V+") pin that is used to supply
 power to the device. This pin can usually be ignored if the device is already
 powered from somewhere else. Be careful when trying to supplying power to VCC
 from a Raspberry Pi or Arduino since they may not be able to provide enough
-current (prefer a [power supply](https://en.wikipedia.org/wiki/Power_supply)
-if you have one).
+current (and they can break if they try anyway)). Also make sure the voltage is correct.
+You may want a [power supply](https://en.wikipedia.org/wiki/Power_supply).
 
 Note that neither RS-232 nor UART specify what data to actually send. In
 practice it is common to see
