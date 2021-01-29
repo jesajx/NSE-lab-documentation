@@ -238,7 +238,8 @@ ring (from master to slave to slave and eventually back to master). This
 variation only requires a single SS-pin on the master. 
 
 
-<!-- TODO SGPIO? https://en.wikipedia.org/wiki/SGPIO -->
+See also:
+* <https://www.youtube.com/watch?v=9hMsNOwY5AQ>
 
 ## I<sup>2</sup>C
 [Inter-Integrated Circuit](https://en.wikipedia.org/wiki/I%C2%B2C) (I<sup>2</sup>C) is a synchronous serial communication interface and protocol.
@@ -265,3 +266,12 @@ variations of I<sup>2</sup>C and can in many cases be used interchangeably.
 See also:
 * [The I<sup>2</sup>C specification](https://www.nxp.com/documents/user_manual/UM10204.pdf)
 * <https://www.i2c-bus.org/specification/>
+* <https://www.youtube.com/watch?v=9hMsNOwY5AQ>
+
+
+<!-- TODO describe what characteristics the pins have and what can be measured
+with voltmeter. e.g. continuity, voltage, detecting pullup/down resistor,
+measure impedance
+
+impedance=resistance in DC?
+-->
