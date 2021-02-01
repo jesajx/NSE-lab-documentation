@@ -269,6 +269,19 @@ See also:
 * <https://www.youtube.com/watch?v=9hMsNOwY5AQ>
 
 
+## Meter-bus ("mbus")
+[Meter-bus](https://en.wikipedia.org/wiki/Meter-Bus) (or "mbus" for short) is different but similar to modbus.
+However, meter-bus seems to be more for just reading, not writing.
+Mbus seems to be common with energy meters (hence the name "meter-bus").
+
+Meter-bus is standardized (in the EU) in EN13757 (notably EN13757-2 and EN13757-3).
+Unfortunately the standards cost money and are not public.
+
+See also:
+* [old spec](https://m-bus.com/documentation)
+* <https://download.beckhoff.com/download/document/Application_Notes/DK9322-0810-0036.pdf>
+* SCADA systems
+
 <!-- TODO describe what characteristics the pins have and what can be measured
 with voltmeter. e.g. continuity, voltage, detecting pullup/down resistor,
 measure impedance
